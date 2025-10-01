@@ -1,0 +1,422 @@
+[2025-10-01 17:38:08,705: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:38:08,716: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:38:08,718: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:38:09,392: ERROR: 2326871357]: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_11956\2326871357.py", line 6, in <module>
+    data_ingestion.download_file()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_11956\342449326.py", line 7, in download_file
+    gdown.download(self.config.source_URL, str(self.config.local_data_file), quiet=False)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\gdown\download.py", line 304, in download
+    for file in os.listdir(osp.dirname(output) or "."):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion'
+[2025-10-01 17:39:17,331: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:39:17,331: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:39:17,331: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:39:17,331: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:39:18,248: INFO: 342449326]: File downloaded successfully and saved to artifacts\data_ingestion\chat_data.csv
+[2025-10-01 17:39:18,518: ERROR: 2326871357]: Error tokenizing data. C error: Expected 1 fields in line 3, saw 4274
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_27116\2326871357.py", line 7, in <module>
+    data_ingestion.data_augmentation()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_27116\342449326.py", line 14, in data_augmentation
+    df = pd.read_csv(self.config.local_data_file)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 3, saw 4274
+
+[2025-10-01 17:45:44,267: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:45:44,269: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:45:44,270: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:45:44,271: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:45:47,325: ERROR: 2326871357]: 'WindowsPath' object has no attribute 'write'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_27116\2326871357.py", line 6, in <module>
+    data_ingestion.download_file()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_27116\3348649974.py", line 17, in download_file
+    raise e
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_27116\3348649974.py", line 13, in download_file
+    gdown.download(prefix + file_id, zip_download_dir)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\gdown\download.py", line 369, in download
+    f.write(chunk)
+AttributeError: 'WindowsPath' object has no attribute 'write'. Did you mean: 'drive'?
+[2025-10-01 17:47:51,131: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:47:51,131: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:47:51,131: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:47:51,131: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:47:53,279: INFO: 3348649974]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 17:47:53,379: ERROR: 2326871357]: 'Client' object has no attribute 'generate_text'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_23324\2326871357.py", line 7, in <module>
+    data_ingestion.data_augmentation()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_23324\3348649974.py", line 25, in data_augmentation
+    paraphrases = self.paraphrase_text(row['Answer'])
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_23324\3348649974.py", line 40, in paraphrase_text
+    response = client.generate_text(
+AttributeError: 'Client' object has no attribute 'generate_text'
+[2025-10-01 17:50:00,339: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:50:00,341: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:50:00,342: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:50:00,342: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:50:02,530: INFO: 466725409]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 17:50:02,530: ERROR: 2326871357]: DataIngestion.paraphrase_text() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\2326871357.py", line 7, in <module>
+    data_ingestion.data_augmentation()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\466725409.py", line 25, in data_augmentation
+    paraphrases = self.paraphrase_text(row['Answer'])
+TypeError: DataIngestion.paraphrase_text() takes 1 positional argument but 2 were given
+[2025-10-01 17:51:42,885: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:51:42,887: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:51:42,889: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:51:42,889: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:51:45,270: INFO: 3051205662]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 17:51:45,327: ERROR: 2326871357]: 'Client' object has no attribute 'responses'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\2326871357.py", line 7, in <module>
+    data_ingestion.data_augmentation()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\3051205662.py", line 25, in data_augmentation
+    paraphrases = self.paraphrase_text(row['Answer'])
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\3051205662.py", line 42, in paraphrase_text
+    response = client.responses.create(
+AttributeError: 'Client' object has no attribute 'responses'
+[2025-10-01 17:53:46,173: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:53:46,174: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:53:46,175: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:53:46,176: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:53:48,391: INFO: 2648575987]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 17:53:48,414: ERROR: 2326871357]: Models.generate_content() got an unexpected keyword argument 'input'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\2326871357.py", line 7, in <module>
+    data_ingestion.data_augmentation()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\2648575987.py", line 25, in data_augmentation
+    paraphrases = self.paraphrase_text(row['Answer'])
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\2648575987.py", line 42, in paraphrase_text
+    response = client.models.generate_content(
+TypeError: Models.generate_content() got an unexpected keyword argument 'input'
+[2025-10-01 17:54:01,345: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:54:01,346: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:54:01,347: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:54:01,349: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:54:03,384: INFO: 318864275]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 17:54:03,416: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:54:34,665: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:54:34,668: ERROR: 2326871357]: 'GenerateContentResponse' object has no attribute 'output_text'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\2326871357.py", line 7, in <module>
+    data_ingestion.data_augmentation()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\318864275.py", line 25, in data_augmentation
+    paraphrases = self.paraphrase_text(row['Answer'])
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14780\318864275.py", line 48, in paraphrase_text
+    paraphrases = [line.strip() for line in response.output_text.split("\n") if line.strip()]
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'GenerateContentResponse' object has no attribute 'output_text'
+[2025-10-01 17:55:33,408: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 17:55:33,409: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 17:55:33,410: INFO: helper]: Directory created at: artifacts
+[2025-10-01 17:55:33,411: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 17:55:35,613: INFO: 1440940172]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 17:55:35,645: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:55:45,600: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:55:45,621: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:55:54,584: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:55:54,608: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:56:02,135: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:56:02,160: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:56:08,754: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:56:08,776: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:56:17,688: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:56:17,716: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:56:25,776: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:56:25,798: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:56:35,267: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:56:35,291: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:56:43,472: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:56:43,494: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:56:52,578: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:56:52,598: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:02,288: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:02,310: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:11,196: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:11,217: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:18,035: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:18,060: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:26,488: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:26,509: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:33,557: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:33,578: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:41,151: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:41,170: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:49,131: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:49,152: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:57:55,642: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:57:55,662: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:58:05,035: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:58:05,062: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:58:17,189: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:58:17,217: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:58:28,029: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:58:28,059: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:58:37,018: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:58:37,044: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:58:44,722: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:58:44,749: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:58:54,046: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:58:54,071: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:59:01,448: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:59:01,471: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:59:09,594: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:59:09,626: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:59:16,878: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:59:16,900: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:59:26,936: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:59:26,962: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:59:34,338: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:59:34,363: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:59:44,377: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:59:44,398: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 17:59:54,016: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 17:59:54,054: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:00:02,475: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:00:02,501: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:00:10,565: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:00:10,596: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:00:18,770: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:00:18,793: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:00:27,137: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:00:27,162: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:00:35,104: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:00:35,128: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:00:45,978: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:00:46,002: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:00:54,867: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:00:54,889: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:01:14,234: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:01:14,259: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:01:24,307: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:01:24,330: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:01:30,981: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:01:31,004: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:01:39,116: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:01:39,137: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:01:48,902: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:01:48,925: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:01:58,002: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:01:58,022: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:02:04,767: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:02:04,788: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:02:13,158: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:02:13,180: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:02:21,171: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:02:21,192: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:02:30,460: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:02:30,488: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:02:37,773: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:02:37,799: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:02:46,922: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:02:46,946: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 18:02:56,211: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 18:02:56,218: INFO: 1440940172]: Data augmentation completed and saved to artifacts/data_ingestion/data.csv
+[2025-10-01 18:02:56,218: INFO: 2326871357]: Data ingestion completed successfully.
+[2025-10-01 18:55:49,138: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 18:55:49,138: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 18:55:49,138: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 18:55:49,181: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 19:02:11,969: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 19:02:11,972: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 19:02:11,974: ERROR: 1568427099]: Error occurred: "'ConfigBox' object has no attribute 'root_dir'"
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_26820\1568427099.py", line 2, in <module>
+    config = ConfigurationManager()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_26820\4019593451.py", line 9, in __init__
+    create_directories([self.config.root_dir])
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_dir'"
+[2025-10-01 19:02:53,082: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 19:02:53,084: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 19:02:53,085: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 19:02:53,085: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 19:02:53,087: ERROR: 1568427099]: Error occurred: "'ConfigBox' object has no attribute 'embeddings_file'"
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'embeddings_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'embeddings_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'embeddings_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'embeddings_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'embeddings_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'embeddings_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'embeddings_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_26820\1568427099.py", line 3, in <module>
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_26820\482523854.py", line 15, in get_data_ingestion_config
+    embeddings_file=Path(self.config.embeddings_file),
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'embeddings_file'"
+[2025-10-01 19:04:06,183: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 19:04:06,185: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 19:04:06,186: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 19:04:06,187: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 19:04:06,187: ERROR: 1568427099]: Error occurred: "'ConfigBox' object has no attribute 'model_name'"
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_26820\1568427099.py", line 3, in <module>
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_26820\1069021283.py", line 16, in get_data_ingestion_config
+    model_name=self.config.model_name,
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_name'"
+[2025-10-01 19:04:15,647: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 19:04:15,648: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 19:04:15,649: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 19:04:15,650: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 19:04:15,652: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 19:04:15,654: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 19:04:20,024: WARNING: file_download]: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2025-10-01 19:04:26,753: INFO: 2983522759]: Loading data...
+[2025-10-01 19:04:26,753: INFO: 2983522759]: Generating embeddings...
+[2025-10-01 19:04:27,467: INFO: 2983522759]: Saving embeddings...
+[2025-10-01 19:04:27,467: INFO: 2983522759]: Total embeddings indexed: 300
+[2025-10-01 19:04:27,467: INFO: 2983522759]: Embeddings saved to artifacts\embeddings\embeddings.pkl
+[2025-10-01 19:04:27,474: INFO: 1568427099]: Embeddings generation completed successfully.
