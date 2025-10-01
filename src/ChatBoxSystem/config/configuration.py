@@ -1,5 +1,5 @@
 from ChatBoxSystem.constants import *
-from ChatBoxSystem.entity.config_entity import DataIngestionConfig, EmbeddingsConfig
+from ChatBoxSystem.entity.config_entity import DataIngestionConfig, EmbeddingsConfig, RetrievalConfig
 from ChatBoxSystem.utils.helper import read_yaml, create_directories
 
 class ConfigurationManager:
@@ -34,3 +34,12 @@ class ConfigurationManager:
             local_data_file=Path(self.config.embeddings.local_data_file),
         )
         return embeddings_config
+    
+    def get_retrieval_config(self) -> RetrievalConfig:
+        retrieval_config = self.config.retrieval
+        retrieval_config = RetrievalConfig(
+            top_k=retrieval_config.top_k,
+            model_name=self.config.embeddings.model_name,
+            embeddings_file=self.config.embeddings.embeddings_file
+        )
+        return retrieval_config

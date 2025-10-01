@@ -1,0 +1,59 @@
+[2025-10-01 20:34:50,111: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 20:34:50,112: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 20:34:50,112: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 20:34:50,132: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 20:38:36,308: ERROR: 1193083817]: Error occurred: name 'BoxValueError' is not defined
+Traceback (most recent call last):
+  File "f:\projectai\chatsystem\src\ChatBoxSystem\utils\helper.py", line 19, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14032\1193083817.py", line 4, in <module>
+    config = ConfigurationManager()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14032\262581572.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "f:\projectai\chatsystem\src\ChatBoxSystem\utils\helper.py", line 23, in read_yaml
+    except BoxValueError as e:
+NameError: name 'BoxValueError' is not defined. Did you mean: 'ValueError'?
+[2025-10-01 20:39:10,913: ERROR: 1193083817]: Error occurred: name 'BoxValueError' is not defined
+Traceback (most recent call last):
+  File "f:\projectai\chatsystem\src\ChatBoxSystem\utils\helper.py", line 19, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14032\1193083817.py", line 4, in <module>
+    config = ConfigurationManager()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14032\262581572.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "f:\projectai\chatsystem\src\ChatBoxSystem\utils\helper.py", line 23, in read_yaml
+    except BoxValueError as e:
+NameError: name 'BoxValueError' is not defined. Did you mean: 'ValueError'?
+[2025-10-01 20:42:17,145: ERROR: 1193083817]: Error occurred: name 'BoxValueError' is not defined
+Traceback (most recent call last):
+  File "f:\projectai\chatsystem\src\ChatBoxSystem\utils\helper.py", line 19, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14032\1193083817.py", line 4, in <module>
+    config = ConfigurationManager()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_14032\262581572.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "f:\projectai\chatsystem\src\ChatBoxSystem\utils\helper.py", line 23, in read_yaml
+    except BoxValueError as e:
+NameError: name 'BoxValueError' is not defined. Did you mean: 'ValueError'?

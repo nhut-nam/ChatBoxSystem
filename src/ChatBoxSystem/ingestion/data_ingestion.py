@@ -5,7 +5,7 @@ from ChatBoxSystem import logger
 import pandas as pd
 from google import genai
 from google.genai import types
-from ChatBoxSystem.constants import API_KEY as api_key
+from ChatBoxSystem.constants import API_KEY
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
@@ -45,8 +45,8 @@ class DataIngestion:
 
 
     def paraphrase_text(self, text: str) -> list:
-        prompt = f"Paraphrase the following text into 5 different ways:\n{text}"
-        client = genai.Client(api_key=api_key)
+        prompt = f"Paraphrase the following text into 10 different ways:\n{text}"
+        client = genai.Client(api_key=API_KEY)
 
         response = client.models.generate_content(
             model="gemini-2.5-flash",  # hoặc gemini-2 nếu bạn có quyền

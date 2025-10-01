@@ -1,5 +1,5 @@
 from ChatBoxSystem.config.configuration import ConfigurationManager 
-from ChatBoxSystem.ingestion.data_ingestion import Embeddings
+from ChatBoxSystem.embeddings.embeddings import Embeddings
 from ChatBoxSystem import logger
 
 STAGE_NAME = "Embeddings stage"
@@ -10,9 +10,9 @@ class EmbeddingsPipeline:
 
     def main(self):
         config = ConfigurationManager()
-        data_ingestion_config = config.get_data_ingestion_config()
+        embeddings_config = config.get_embeddings_config()
 
-        embeddings = Embeddings(config=data_ingestion_config)
+        embeddings = Embeddings(config=embeddings_config)
         embeddings.generate_embeddings()
         logger.info("Embeddings generation completed successfully.")
 

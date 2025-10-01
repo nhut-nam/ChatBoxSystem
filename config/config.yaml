@@ -7,6 +7,9 @@ data_ingestion:
 
 embeddings:
   root_dir: artifacts/embeddings
-  embeddings_file: artifacts/embeddings/embeddings.pkl
+  embeddings_file: artifacts/embeddings/embeddings.index
   model_name: "all-MiniLM-L6-v2"
   local_data_file: artifacts/data_ingestion/data.csv
+
+retrieval:
+  top_k: 3

@@ -420,3 +420,728 @@ box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_name'"
 [2025-10-01 19:04:27,467: INFO: 2983522759]: Total embeddings indexed: 300
 [2025-10-01 19:04:27,467: INFO: 2983522759]: Embeddings saved to artifacts\embeddings\embeddings.pkl
 [2025-10-01 19:04:27,474: INFO: 1568427099]: Embeddings generation completed successfully.
+[2025-10-01 20:23:48,796: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 20:23:48,797: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 20:23:48,798: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 20:23:48,954: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 20:23:49,011: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:23:49,013: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:23:49,015: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 20:23:49,016: ERROR: 1568427099]: Error occurred: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_12028\1568427099.py", line 3, in <module>
+    data_ingestion_config = config.get_data_ingestion_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+[2025-10-01 20:24:15,546: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:24:15,547: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:24:15,548: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 20:24:15,549: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 20:24:15,553: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:24:15,553: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:24:20,122: INFO: 3818667061]: Loading data...
+[2025-10-01 20:24:20,130: INFO: 3818667061]: Generating embeddings...
+[2025-10-01 20:24:20,932: INFO: 3818667061]: Saving embeddings...
+[2025-10-01 20:24:20,935: INFO: 3818667061]: Total embeddings indexed: 300
+[2025-10-01 20:24:20,938: ERROR: 29449560]: Error occurred: Error in __cdecl faiss::FileIOWriter::FileIOWriter(const char *) at D:\a\faiss-wheels\faiss-wheels\third-party\faiss\faiss\impl\io.cpp:104: Error: 'f' failed: could not open artifacts\embeddings for writing: Permission denied
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_12028\29449560.py", line 6, in <module>
+    embeddings.generate_embeddings()
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_12028\3818667061.py", line 14, in generate_embeddings
+    self.save_embeddings(embeddings, texts)
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_12028\3818667061.py", line 24, in save_embeddings
+    faiss.write_index(index, str(self.config.embeddings_file))
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\faiss\swigfaiss_avx2.py", line 11267, in write_index
+    return _swigfaiss_avx2.write_index(*args)
+RuntimeError: Error in __cdecl faiss::FileIOWriter::FileIOWriter(const char *) at D:\a\faiss-wheels\faiss-wheels\third-party\faiss\faiss\impl\io.cpp:104: Error: 'f' failed: could not open artifacts\embeddings for writing: Permission denied
+[2025-10-01 20:25:53,980: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:25:53,982: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:25:53,983: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 20:25:53,984: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 20:25:53,986: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:25:53,987: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:25:57,784: INFO: 3818667061]: Loading data...
+[2025-10-01 20:25:57,784: INFO: 3818667061]: Generating embeddings...
+[2025-10-01 20:25:58,448: INFO: 3818667061]: Saving embeddings...
+[2025-10-01 20:25:58,450: INFO: 3818667061]: Total embeddings indexed: 300
+[2025-10-01 20:25:58,450: INFO: 3818667061]: Embeddings saved to artifacts\embeddings\embeddings
+[2025-10-01 20:25:58,450: INFO: 29449560]: Embeddings generation completed successfully.
+[2025-10-01 20:43:27,687: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 20:43:27,687: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 20:43:27,687: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 20:43:27,826: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 20:43:27,882: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:43:27,883: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:43:27,884: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:43:27,887: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:43:27,887: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:43:32,067: ERROR: 1193083817]: Error occurred: Error in __cdecl faiss::FileIOReader::FileIOReader(const char *) at D:\a\faiss-wheels\faiss-wheels\third-party\faiss\faiss\impl\io.cpp:70: Error: 'f' failed: could not open artifacts/embeddings/embeddings.index.index for reading: No such file or directory
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_5692\1193083817.py", line 7, in <module>
+    retrieval = Retrieval(config=retrieval_config)
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_5692\1200906793.py", line 5, in __init__
+    self.index = faiss.read_index(self.config.embeddings_file + ".index")
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\faiss\swigfaiss_avx2.py", line 11273, in read_index
+    return _swigfaiss_avx2.read_index(*args)
+RuntimeError: Error in __cdecl faiss::FileIOReader::FileIOReader(const char *) at D:\a\faiss-wheels\faiss-wheels\third-party\faiss\faiss\impl\io.cpp:70: Error: 'f' failed: could not open artifacts/embeddings/embeddings.index.index for reading: No such file or directory
+[2025-10-01 20:44:02,026: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:44:02,028: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:44:02,029: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:44:02,031: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:44:02,032: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:44:05,836: ERROR: 1193083817]: Error occurred: 'str' object has no attribute 'with_suffix'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_5692\1193083817.py", line 7, in <module>
+    retrieval = Retrieval(config=retrieval_config)
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_5692\51609558.py", line 6, in __init__
+    self.texts = np.load(self.config.embeddings_file.with_suffix('.npy'), allow_pickle=True)
+AttributeError: 'str' object has no attribute 'with_suffix'
+[2025-10-01 20:44:49,331: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 20:44:49,331: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 20:44:49,331: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 20:44:49,447: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 20:44:49,508: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:44:49,509: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:44:49,510: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:44:49,512: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:44:49,512: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:44:53,578: ERROR: 1193083817]: Error occurred: Wrong number or type of arguments for overloaded function 'read_index'.
+  Possible C/C++ prototypes are:
+    faiss::read_index(char const *,int)
+    faiss::read_index(char const *)
+    faiss::read_index(FILE *,int)
+    faiss::read_index(FILE *)
+    faiss::read_index(faiss::IOReader *,int)
+    faiss::read_index(faiss::IOReader *)
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\1193083817.py", line 7, in <module>
+    retrieval = Retrieval(config=retrieval_config)
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\51609558.py", line 5, in __init__
+    self.index = faiss.read_index(self.config.embeddings_file)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\faiss\swigfaiss_avx2.py", line 11273, in read_index
+    return _swigfaiss_avx2.read_index(*args)
+TypeError: Wrong number or type of arguments for overloaded function 'read_index'.
+  Possible C/C++ prototypes are:
+    faiss::read_index(char const *,int)
+    faiss::read_index(char const *)
+    faiss::read_index(FILE *,int)
+    faiss::read_index(FILE *)
+    faiss::read_index(faiss::IOReader *,int)
+    faiss::read_index(faiss::IOReader *)
+
+[2025-10-01 20:45:50,970: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:45:50,972: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:45:50,972: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:45:50,975: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:45:50,976: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:45:54,799: ERROR: 1193083817]: Error occurred: Wrong number or type of arguments for overloaded function 'read_index'.
+  Possible C/C++ prototypes are:
+    faiss::read_index(char const *,int)
+    faiss::read_index(char const *)
+    faiss::read_index(FILE *,int)
+    faiss::read_index(FILE *)
+    faiss::read_index(faiss::IOReader *,int)
+    faiss::read_index(faiss::IOReader *)
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\1193083817.py", line 7, in <module>
+    retrieval = Retrieval(config=retrieval_config)
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\411801695.py", line 5, in __init__
+    self.index = faiss.read_index(self.config.embeddings_file)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\faiss\swigfaiss_avx2.py", line 11273, in read_index
+    return _swigfaiss_avx2.read_index(*args)
+TypeError: Wrong number or type of arguments for overloaded function 'read_index'.
+  Possible C/C++ prototypes are:
+    faiss::read_index(char const *,int)
+    faiss::read_index(char const *)
+    faiss::read_index(FILE *,int)
+    faiss::read_index(FILE *)
+    faiss::read_index(faiss::IOReader *,int)
+    faiss::read_index(faiss::IOReader *)
+
+[2025-10-01 20:46:23,353: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:46:23,355: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:46:23,356: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:46:23,358: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:46:23,359: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:46:27,129: ERROR: 1193083817]: Error occurred: [Errno 2] No such file or directory: 'artifacts/embeddings/embeddings.index.npy'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\1193083817.py", line 7, in <module>
+    retrieval = Retrieval(config=retrieval_config)
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\411801695.py", line 6, in __init__
+    self.texts = np.load(self.config.embeddings_file + '.npy', allow_pickle=True)
+  File "c:\Users\namnh\miniconda3\envs\ChatBoxAI\lib\site-packages\numpy\lib\_npyio_impl.py", line 451, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/embeddings/embeddings.index.npy'
+[2025-10-01 20:47:01,210: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:47:01,212: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:47:01,213: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:47:01,216: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:47:01,216: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:47:04,992: ERROR: 1193083817]: Error occurred: 'str' object has no attribute 'with_suffix'
+Traceback (most recent call last):
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\1193083817.py", line 7, in <module>
+    retrieval = Retrieval(config=retrieval_config)
+  File "C:\Users\namnh\AppData\Local\Temp\ipykernel_21060\3775476799.py", line 7, in __init__
+    self.texts = np.load(self.config.embeddings_file.with_suffix('.npy'), allow_pickle=True)
+AttributeError: 'str' object has no attribute 'with_suffix'
+[2025-10-01 20:47:28,506: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:47:28,508: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:47:28,509: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:47:28,512: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:47:28,513: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:47:32,268: INFO: 1193083817]: Retrieval completed successfully.
+[2025-10-01 20:53:00,182: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:53:00,184: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:53:00,185: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:53:00,188: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:53:00,189: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:53:04,185: INFO: 977177932]: Retrieval completed successfully.
+[2025-10-01 20:53:23,868: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:53:23,868: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:53:23,868: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:53:23,868: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:53:23,874: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:53:27,589: INFO: 2186049157]: Retrieval completed successfully.
+[2025-10-01 20:55:16,970: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:55:16,972: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:55:16,972: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:55:16,972: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:55:16,972: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:55:20,726: INFO: 1586978415]: Retrieval completed successfully.
+[2025-10-01 20:56:57,974: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:56:57,975: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:56:57,977: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:56:57,980: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:56:57,980: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:57:02,147: INFO: 1586978415]: Retrieval completed successfully.
+[2025-10-01 20:57:40,268: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 20:57:40,269: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 20:57:40,270: INFO: helper]: Directory created at: artifacts
+[2025-10-01 20:57:40,273: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 20:57:40,274: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 20:57:44,024: INFO: 1586978415]: Retrieval completed successfully.
+[2025-10-01 21:00:05,298: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:00:05,298: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:00:05,298: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:00:05,304: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:00:05,305: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:00:09,790: INFO: 2634134274]: Retrieval completed successfully.
+[2025-10-01 21:00:23,000: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:00:23,001: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:00:23,001: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:00:23,001: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:00:23,001: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:00:26,778: INFO: 508956482]: Retrieval completed successfully.
+[2025-10-01 21:00:59,336: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:00:59,338: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:00:59,339: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:00:59,342: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:00:59,343: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:01:03,093: INFO: 2212425927]: Retrieval completed successfully.
+[2025-10-01 21:01:41,100: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:01:41,102: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:01:41,103: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:01:41,105: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:01:41,106: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:01:44,935: INFO: 1801141296]: Retrieval completed successfully.
+[2025-10-01 21:10:29,342: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:10:29,342: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:10:29,342: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:10:29,359: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:10:29,359: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:10:29,359: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:10:29,359: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:10:29,359: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:10:29,359: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:10:32,070: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:10:32,086: ERROR: main]: >>>>>> stage Data Ingestion stage failed Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments. <<<<<<
+[2025-10-01 21:10:32,086: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:10:32,086: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:10:32,086: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:10:32,086: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:10:32,086: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:10:32,086: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:10:32,086: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:10:36,664: INFO: embeddings]: Loading data...
+[2025-10-01 21:10:36,664: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:10:36,757: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:10:36,758: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:10:36,759: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:10:36,759: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:10:36,760: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 21:12:26,437: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:12:26,437: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:12:26,437: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:12:26,467: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:12:26,469: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:12:26,485: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:12:26,485: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:12:26,485: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:12:26,485: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:12:28,670: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:12:28,674: ERROR: main]: >>>>>> stage Data Ingestion stage failed Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments. <<<<<<
+[2025-10-01 21:12:28,675: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:12:28,677: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:12:28,678: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:12:28,678: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:12:28,679: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:12:28,680: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:12:28,680: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:12:33,179: INFO: embeddings]: Loading data...
+[2025-10-01 21:12:33,179: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:12:33,263: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:12:33,263: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:12:33,265: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:12:33,265: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:12:33,265: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 21:14:54,183: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:14:54,185: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:14:54,187: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:14:54,188: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:14:55,946: INFO: 1440940172]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:14:56,013: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:16:07,758: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:16:07,758: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:16:07,758: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:16:07,764: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:16:07,786: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:16:07,786: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:16:07,786: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:16:07,786: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:16:07,786: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:16:09,886: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:16:09,886: ERROR: main]: >>>>>> stage Data Ingestion stage failed Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments. <<<<<<
+[2025-10-01 21:16:09,886: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:16:09,893: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:16:09,893: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:16:09,893: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:16:09,893: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:16:09,893: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:16:09,893: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:16:14,399: INFO: embeddings]: Loading data...
+[2025-10-01 21:16:14,399: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:16:14,480: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:16:14,480: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:16:14,480: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:16:14,480: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:16:14,480: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 21:17:19,858: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:17:19,858: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:17:19,858: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:17:19,874: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:17:19,889: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:17:19,889: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:17:19,889: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:17:19,889: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:17:19,889: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:17:21,771: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:17:21,782: ERROR: main]: >>>>>> stage Data Ingestion stage failed Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments. <<<<<<
+[2025-10-01 21:17:21,782: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:17:21,782: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:17:21,782: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:17:21,782: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:17:21,782: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:17:21,782: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:17:21,782: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:17:26,106: INFO: embeddings]: Loading data...
+[2025-10-01 21:17:26,106: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:17:26,189: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:17:26,191: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:17:26,191: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:17:26,191: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:17:26,191: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 21:18:33,848: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:18:33,849: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:18:33,850: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:18:33,866: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:18:33,874: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:18:33,876: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:18:33,878: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:18:33,878: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:18:33,878: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:18:35,635: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:18:35,700: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:18:56,983: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:18:56,983: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:18:56,983: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:18:56,999: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:18:57,015: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:18:57,015: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:18:57,015: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:18:57,015: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:18:57,015: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:18:58,875: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:18:58,939: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:19:10,248: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:19:10,285: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:19:24,213: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:19:24,251: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:19:38,962: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:19:38,994: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:19:53,573: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:19:53,605: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:20:10,052: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:20:10,068: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:20:24,673: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:20:24,709: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:20:38,905: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:20:38,931: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:20:48,693: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:20:48,724: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:21:01,571: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:21:01,602: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:21:06,521: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+[2025-10-01 21:21:06,522: ERROR: main]: >>>>>> stage Data Ingestion stage failed 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}} <<<<<<
+[2025-10-01 21:21:06,523: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:21:06,526: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:21:06,527: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:21:06,527: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:21:06,529: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:21:06,534: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:21:06,534: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:21:13,058: INFO: embeddings]: Loading data...
+[2025-10-01 21:21:13,058: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:21:13,149: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:21:13,150: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:21:13,151: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:21:13,151: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:21:13,151: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 21:22:21,092: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:22:21,092: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:22:21,092: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:22:21,105: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:22:21,120: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:22:21,120: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:22:21,120: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:22:21,120: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:22:21,120: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:22:23,462: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:22:23,532: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:22:32,596: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:22:32,627: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:22:57,712: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:22:57,738: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:23:10,786: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:23:10,818: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:23:21,776: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:23:21,792: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:23:33,336: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:23:33,368: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:23:37,215: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+[2025-10-01 21:23:37,215: ERROR: main]: >>>>>> stage Data Ingestion stage failed 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}} <<<<<<
+[2025-10-01 21:23:37,231: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:23:37,231: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:23:37,231: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:23:37,231: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:23:37,231: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:23:37,231: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:23:37,231: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:23:41,771: INFO: embeddings]: Loading data...
+[2025-10-01 21:23:41,771: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:23:41,859: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:23:41,859: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:23:41,859: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:23:41,859: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:23:41,859: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 21:37:30,175: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:37:30,175: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:37:30,175: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:37:30,191: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:37:30,207: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:37:30,207: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:37:30,223: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:37:30,223: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:37:30,223: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:37:32,624: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:37:32,688: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:37:42,863: ERROR: main]: >>>>>> stage Data Ingestion stage failed [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017) <<<<<<
+[2025-10-01 21:37:42,863: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:37:42,863: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:37:42,863: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:37:42,863: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:37:42,863: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:37:42,863: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:37:42,863: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:37:47,298: INFO: embeddings]: Loading data...
+[2025-10-01 21:37:47,314: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:37:47,377: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:37:47,377: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:37:47,377: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:37:47,377: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:37:47,377: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 21:39:09,382: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 21:39:09,382: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 21:39:09,382: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 21:39:09,414: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 21:39:09,414: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 21:39:09,414: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:39:09,414: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:39:09,414: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:39:09,414: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 21:39:11,634: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 21:39:11,714: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:39:22,766: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:39:22,792: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:39:37,339: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:39:37,379: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:39:49,012: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:39:49,025: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:40:02,857: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:40:02,888: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:40:22,416: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:40:22,446: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:40:33,731: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 21:40:33,747: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 21:40:37,212: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+[2025-10-01 21:40:37,212: ERROR: main]: >>>>>> stage Data Ingestion stage failed 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}} <<<<<<
+[2025-10-01 21:40:37,212: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 21:40:37,217: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 21:40:37,217: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 21:40:37,217: INFO: helper]: Directory created at: artifacts
+[2025-10-01 21:40:37,217: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 21:40:37,217: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 21:40:37,217: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 21:40:41,508: INFO: embeddings]: Loading data...
+[2025-10-01 21:40:41,508: INFO: embeddings]: Generating embeddings...
+[2025-10-01 21:40:41,588: INFO: embeddings]: Saving embeddings...
+[2025-10-01 21:40:41,588: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 21:40:41,588: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 21:40:41,588: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 21:40:41,588: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 22:37:23,718: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 22:37:23,718: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 22:37:23,718: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 22:37:23,731: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 22:37:23,731: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 22:37:23,731: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 22:37:23,731: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 22:37:23,731: INFO: helper]: Directory created at: artifacts
+[2025-10-01 22:37:23,731: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 22:37:26,008: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 22:37:26,087: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:37:38,839: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:37:38,855: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:37:53,005: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:37:53,043: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:38:06,675: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:38:06,707: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:38:16,427: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:38:16,459: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:38:25,671: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:38:25,687: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:38:37,017: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:38:37,038: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:38:50,041: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:38:50,069: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:39:01,409: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:39:01,448: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:39:12,152: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:39:12,180: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:39:24,005: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:39:24,022: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:39:35,215: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:39:35,245: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:39:45,529: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:39:45,547: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:39:54,329: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:39:54,361: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:40:02,608: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:40:02,640: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:40:13,134: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:40:13,150: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:40:27,370: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:40:27,386: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:40:38,485: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:40:38,517: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:41:07,685: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:41:07,701: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:41:19,593: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:41:19,609: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:41:29,682: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:41:29,713: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:41:40,980: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:41:40,995: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:41:49,851: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:41:49,867: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:42:00,492: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:42:00,524: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:42:15,388: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:42:15,420: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:42:21,469: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+[2025-10-01 22:42:21,471: ERROR: main]: >>>>>> stage Data Ingestion stage failed 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}} <<<<<<
+[2025-10-01 22:42:21,471: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 22:42:21,471: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 22:42:21,471: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 22:42:21,471: INFO: helper]: Directory created at: artifacts
+[2025-10-01 22:42:21,471: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 22:42:21,471: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 22:42:21,471: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 22:42:25,780: INFO: embeddings]: Loading data...
+[2025-10-01 22:42:25,780: INFO: embeddings]: Generating embeddings...
+[2025-10-01 22:42:25,864: INFO: embeddings]: Saving embeddings...
+[2025-10-01 22:42:25,864: INFO: embeddings]: Total embeddings indexed: 50
+[2025-10-01 22:42:25,864: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 22:42:25,864: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 22:42:25,864: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x
+[2025-10-01 22:48:09,778: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 22:48:09,778: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 22:48:09,778: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 22:48:09,794: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 22:48:09,794: INFO: main]: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-10-01 22:48:09,794: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 22:48:09,794: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 22:48:09,810: INFO: helper]: Directory created at: artifacts
+[2025-10-01 22:48:09,810: INFO: helper]: Directory created at: artifacts/data_ingestion
+[2025-10-01 22:48:12,038: INFO: data_ingestion]: Downloaded file from :[https://drive.google.com/file/d/1AixdvjgwB0np9dIrxVJrmlzWI6AaDhwq/view?usp=sharing] and saved at :[artifacts/data_ingestion/data.csv]
+[2025-10-01 22:48:12,085: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:48:31,346: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:48:31,362: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:48:41,922: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:48:41,954: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:48:54,032: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:48:54,063: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:49:08,825: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:49:08,857: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:49:18,888: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:49:18,923: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:49:30,745: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:49:30,777: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:49:45,422: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:49:45,454: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:49:52,428: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:49:52,460: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:50:04,338: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:50:04,354: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:50:19,186: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:50:19,210: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:50:34,746: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:50:34,762: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:50:45,680: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:50:45,707: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:50:58,733: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:50:58,767: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:51:11,580: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:51:11,612: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:51:26,335: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:51:26,371: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:51:38,587: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:51:38,604: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:51:51,949: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:51:51,981: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:52:21,405: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:52:21,421: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:52:31,861: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:52:31,877: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:52:45,695: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:52:45,711: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:52:56,765: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:52:56,781: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:53:10,773: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:53:10,788: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:53:30,635: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:53:30,673: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:53:43,293: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:53:43,331: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:53:56,750: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:53:56,787: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:54:07,907: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:54:07,937: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:54:22,773: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:54:22,804: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:54:34,476: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:54:34,508: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:54:55,710: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:54:55,731: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:55:08,308: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:55:08,324: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:55:21,215: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:55:21,245: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:55:35,436: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:55:35,475: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:55:45,983: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:55:46,008: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:55:59,180: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:55:59,204: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:56:10,617: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:56:10,650: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:56:20,514: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:56:20,535: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:56:31,796: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:56:31,818: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:56:48,320: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:56:48,336: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:57:00,188: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:57:00,221: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:57:10,495: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:57:10,526: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:57:22,168: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:57:22,200: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:57:36,157: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:57:36,181: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:57:45,647: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:57:45,671: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:57:54,833: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:57:54,849: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:58:08,620: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:58:08,636: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:58:21,756: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:58:21,776: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:58:42,180: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:58:42,202: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:58:55,739: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:58:55,760: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:59:10,090: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:59:10,115: INFO: models]: AFC is enabled with max remote calls: 10.
+[2025-10-01 22:59:20,936: INFO: _client]: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+[2025-10-01 22:59:20,945: INFO: data_ingestion]: Data augmentation completed and saved to artifacts/data_ingestion/data.csv
+[2025-10-01 22:59:20,946: INFO: stage_01_data_ingestion]: Data ingestion completed successfully.
+[2025-10-01 22:59:20,946: INFO: main]: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-10-01 22:59:20,946: INFO: main]: >>>>>> stage Embeddings stage started <<<<<<
+[2025-10-01 22:59:20,948: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 22:59:20,949: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 22:59:20,949: INFO: helper]: Directory created at: artifacts
+[2025-10-01 22:59:20,950: INFO: helper]: Directory created at: artifacts/embeddings
+[2025-10-01 22:59:20,952: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 22:59:20,952: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 22:59:24,794: INFO: embeddings]: Loading data...
+[2025-10-01 22:59:24,794: INFO: embeddings]: Generating embeddings...
+[2025-10-01 22:59:25,923: INFO: embeddings]: Saving embeddings...
+[2025-10-01 22:59:25,924: INFO: embeddings]: Total embeddings indexed: 550
+[2025-10-01 22:59:25,924: INFO: embeddings]: Embeddings saved to artifacts\embeddings\embeddings.index
+[2025-10-01 22:59:25,924: INFO: stage_02_embeddings]: Embeddings generation completed successfully.
+[2025-10-01 22:59:25,924: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
+
+x==========x

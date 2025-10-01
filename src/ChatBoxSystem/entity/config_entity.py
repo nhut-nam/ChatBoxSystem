@@ -14,3 +14,9 @@ class EmbeddingsConfig:
     embeddings_file: Path
     model_name: str
     local_data_file: Path
+
+@dataclass
+class RetrievalConfig:
+    top_k: int 
+    model_name: str
+    embeddings_file: str
