@@ -1145,3 +1145,20 @@ x==========x
 [2025-10-01 22:59:25,924: INFO: main]: >>>>>> stage Embeddings stage completed <<<<<<
 
 x==========x
+[2025-10-01 23:00:12,003: INFO: loader]: Loading faiss with AVX512 support.
+[2025-10-01 23:00:12,003: INFO: loader]: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2025-10-01 23:00:12,019: INFO: loader]: Loading faiss with AVX2 support.
+[2025-10-01 23:00:12,139: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2025-10-01 23:00:12,218: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 23:00:12,220: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 23:00:12,221: INFO: helper]: Directory created at: artifacts
+[2025-10-01 23:00:12,224: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 23:00:12,224: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 23:00:16,398: INFO: 1801141296]: Retrieval completed successfully.
+[2025-10-01 23:00:48,685: INFO: helper]: YAML file config\config.yaml loaded successfully.
+[2025-10-01 23:00:48,685: INFO: helper]: YAML file params.yaml loaded successfully.
+[2025-10-01 23:00:48,685: INFO: helper]: Directory created at: artifacts
+[2025-10-01 23:00:48,690: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2025-10-01 23:00:48,690: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-10-01 23:00:52,310: INFO: 2634134274]: Retrieval completed successfully.
