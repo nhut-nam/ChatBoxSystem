@@ -6,18 +6,18 @@ from ChatBoxSystem.constants import *
 import textwrap
 
 class Generation:
-    def __init__(self, retrieval_results, distances):
+    def __init__(self):
         self.client = genai.Client(api_key=API_KEY)
-        self.retrieval_results = retrieval_results
-        self.distances = distances
     
     def build_prompt(self, query: str, contexts: list) -> str:
         context_text = "\n".join([f"- {c}" for c in contexts])
         prompt = f"""
-        You are a helpful assistant.
-        Answer the question based on the provided context. If the answer is not contained within the context, respond with "I don't know". 
-        Use the following context to answer the question.
-
+        Imagination you are me and you have to answer questions based on the provided context. The context is your own.
+        Like or Dislike the following statements based on the context.
+        Use the following context to answer the question if possible.
+        Answer humanly and conversationally.
+        If the answer is not in the context, try your best to answer based on your general knowledge.
+        
         Context:
         {context_text}
 
@@ -25,18 +25,14 @@ class Generation:
 
         Answer:
         """
-        return textwrap.dedent(prompt)  # loại bỏ khoảng trắng thừa
+        return textwrap.dedent(prompt)
 
     def generate_answer(self, query: str, contexts: list) -> str:
         prompt = self.build_prompt(query, contexts)
 
-        contents = [
-            types.Content(role="user", parts=[types.Part.from_text(text=prompt)])
-        ]
-
         response = self.client.models.generate_content(
             model="gemini-2.5-flash",
-            contents=contents
+            contents=prompt
         )
 
         return response.text.strip()

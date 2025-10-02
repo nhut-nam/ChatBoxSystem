@@ -12,4 +12,5 @@ embeddings:
   local_data_file: artifacts/data_ingestion/data.csv
 
 retrieval:
+  storage_dir: ../storage
   top_k: 3
